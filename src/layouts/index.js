@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import '../scss/index.scss'
 
 const Header = () => (
   <div
@@ -11,7 +11,7 @@ const Header = () => (
       background: 'rebeccapurple',
       marginBottom: '1.45rem',
     }}
-  >
+  className="subtle-shadow">
     <div
       style={{
         margin: '0 auto',
