@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
-const SecondPage = () => (
+
+
+const SecondPage = ({data}) => (
   <div>
     <article className="uk-article">
     
@@ -10,7 +13,7 @@ const SecondPage = () => (
         <p className="uk-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
 
         <div className="uk-cover-container uk-height-medium">
-          <img src="https://picsum.photos/1000/950/?random" alt="" data-uk-cover/>
+          <Img resolutions={data.file.childImageSharp.resolutions} fadeIn title="Title here" alt="Alt text here" />
         </div>
     
         <p className="uk-text-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
@@ -35,3 +38,17 @@ const SecondPage = () => (
 )
 
 export default SecondPage
+
+export const query = graphql`
+query GatsbyImageSampleQuery {
+  file(relativePath: { regex: "/wallhaven-428824/"}) {
+    childImageSharp {
+      # Specify the image processing steps right in the query
+      # Makes it trivial to update as your page's design changes.
+      resolutions(width: 1250, height: 350) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+  }
+}
+`
