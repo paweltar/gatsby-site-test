@@ -9,7 +9,9 @@
     "gatsby-link": "^1.6.17",
     "gatsby-plugin-nprogress": "^1.0.7",
     "gatsby-plugin-react-helmet": "^1.0.5",
-    "gatsby-plugin-sass": "^1.0.12"
+    "gatsby-plugin-sass": "^1.0.12",
+    "jquery": "^3.2.1",
+    "uikit": "^3.0.0-beta.30"
   },
   "keywords": [
     "gatsby"

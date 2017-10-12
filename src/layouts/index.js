@@ -3,6 +3,15 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+try {
+  UIkit.use(Icons);
+} catch(e) {
+  console.log(e);
+}
+
 import '../scss/index.scss'
 
 const Header = () => (
