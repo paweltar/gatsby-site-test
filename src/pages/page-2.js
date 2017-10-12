@@ -12,7 +12,7 @@ const SecondPage = ({data}) => (
     
         <p className="uk-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
 
-        <div className="uk-cover-container uk-height-medium">
+        <div className="uk-cover-container uk-height-medium uk-border-rounded subtle-shadow">
           <Img resolutions={data.file.childImageSharp.resolutions} fadeIn title="Title here" alt="Alt text here" />
         </div>
     
