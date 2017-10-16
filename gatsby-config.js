@@ -41,6 +41,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
