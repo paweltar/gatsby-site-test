@@ -10,7 +10,7 @@ class Footer extends Component {
       <div>
         	<div className="uk-section-media uk-light uk-background-cover uk-padding-small uk-background-fixed menu-bottom__container">
             <div className="uk-container">
-              <p className="uk-heading-line uk-text-center"><span data-uk-icon="icon: chevron-up; ratio: 1.5" data-uk-totop data-uk-scroll></span></p>
+              <p className="uk-heading-line uk-text-center"><span style={{cursor: 'pointer'}} data-uk-icon="icon: chevron-up; ratio: 1.5" data-uk-totop data-uk-scroll></span></p>
             </div>
           </div>
             <div className="uk-section uk-section-secondary uk-section-medium uk-light">
