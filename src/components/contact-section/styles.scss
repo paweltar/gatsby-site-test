@@ -1,0 +1,14 @@
+.social-media-list {
+  display: flex;
+  justify-content: center;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 850;
+}
