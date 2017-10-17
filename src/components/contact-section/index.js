@@ -1,12 +1,10 @@
 import React from 'react'
 
 import './styles.scss'
-import 'leaflet/dist/leaflet.css'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+// import 'leaflet/dist/leaflet.css'
+// import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const ContactSection = () => {
-  const position = [51.505, -0.09];
-  
   return (
     <div className="uk-grid-collapse uk-child-width-expand@s uk-text-center" data-uk-height-match data-uk-grid id="section-contact">
       <div className="uk-padding-large">
@@ -28,14 +26,6 @@ const ContactSection = () => {
         </ul>
       </div>
       <div id="map-container">
-        <Map center={position} zoom={13}>
-          <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Marker position={position} draggable={false}>
-          </Marker>
-        </Map>
       </div>
     </div>
   )
