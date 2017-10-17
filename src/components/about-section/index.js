@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import './styles.scss'
 
 const AboutSection = ({image}) => {
-  console.log(image)
   return (
     <div className="uk-section uk-section-default section--about" id="section-about">
       <div className="uk-container">
