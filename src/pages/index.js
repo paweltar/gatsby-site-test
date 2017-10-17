@@ -7,7 +7,6 @@ const IndexPage = ({data}) => {
   return (
     <div>
       <AboutSection image={data.file.childImageSharp.sizes}/>
-      <Link to="/page-2/">Go to page 2</Link>
     </div>
   )
 }
