@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Link from 'gatsby-link'
-import UIkit from 'uikit'
+import { modal } from 'uikit'
 
 import './styles.scss'
 
@@ -26,7 +26,7 @@ class Header extends Component {
           <nav className="navbar--mobile uk-navbar-container" style={{zIndex: 980}} data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom" data-uk-navbar="dropbar: true; dropbar-mode: push; mode: click">
             <div className="uk-navbar-left">
               <ul className="uk-navbar-nav">
-                <li onClick={() => UIkit.modal('#modal-full').show()}>
+                <li onClick={() => modal('#modal-full').show()}>
                   <a className="uk-navbar-toggle">
                   <span data-uk-icon="icon: menu"></span> <span className="uk-margin-small-left">Menu</span>
                   </a>
@@ -36,7 +36,7 @@ class Header extends Component {
           </nav>
         </div>
         
-        <div id="modal-full" className="uk-modal-full mobile-menu" data-uk-modal onClick={() => UIkit.modal('#modal-full').hide()}>
+        <div id="modal-full" className="uk-modal-full mobile-menu" data-uk-modal onClick={() => modal('#modal-full').hide()}>
           <div className="uk-modal-dialog navigation__dialog">
             <button className="uk-modal-close-full" type="button" data-uk-close></button>
             <div className="uk-flex uk-flex-center uk-flex-middle nav__container">

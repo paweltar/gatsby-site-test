@@ -1,0 +1,42 @@
+.gatsby-image-outer-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.section--hero {
+  h1,
+  h2,
+  p {
+    color: #fff;
+  }
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+.header__text {
+  text-shadow: 0 0 10px #333;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: .5;
+  }
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  &:hover {
+    opacity: 1;
+  }
+}
