@@ -23,7 +23,6 @@ class GallerySection extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 3500,
-      lazyLoad: true,
       responsive: [
         {
           breakpoint: 1024,
