@@ -5,6 +5,7 @@ import AboutSection from '../components/about-section'
 import HeroSection from '../components/hero-section'
 import CtaModule from '../components/cta-module'
 import ContactSection from '../components/contact-section'
+import GallerySection from '../components/gallery-section'
 
 const IndexPage = ({data}) => {
   console.log(data)
@@ -12,6 +13,7 @@ const IndexPage = ({data}) => {
     <div>
       <HeroSection image={data.heroImage.childImageSharp.sizes}/>
       <AboutSection image={data.aboutImage.childImageSharp.sizes}/>
+      <GallerySection/>
       <CtaModule/>
       <ContactSection/>
     </div>

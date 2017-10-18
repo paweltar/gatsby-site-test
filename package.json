@@ -25,6 +25,8 @@
     "react-google-maps": "^9.0.1",
     "react-leaflet": "^1.7.1",
     "react-mapbox-gl": "^2.7.0",
+    "react-slick": "^0.15.4",
+    "slick-carousel": "^1.8.1",
     "uikit": "^3.0.0-beta.30"
   },
   "keywords": [
