@@ -5,7 +5,7 @@ import MyMapComponent from './map'
 
 const ContactSection = () => {
   return (
-    <div className="uk-grid-collapse uk-child-width-expand@s uk-text-center" data-uk-height-match data-uk-grid id="section-contact">
+    <div className="uk-grid-collapse uk-child-width-1-2@s uk-text-center" data-uk-height-match data-uk-grid id="section-contact">
       <div className="uk-padding-large">
         <h1 className="uk-heading-line uk-text-center"><span>Location & Contact</span></h1>
         <p>Macclesfield Forest 68 South Crescent</p>
@@ -24,7 +24,7 @@ const ContactSection = () => {
         
         </ul>
       </div>
-      <div id="map-container">
+      <div id="map-container" style={{minHeight: '400px'}}>
       <MyMapComponent
         isMarkerShown
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzKkIdu16ZlcgEA_OY0sf1RXqxeDE7Qq4"
