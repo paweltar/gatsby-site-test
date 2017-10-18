@@ -38,16 +38,15 @@ class GallerySection extends Component {
     };
     return (
       <div className="uk-section uk-section-muted" id="section-gallery">
-        <div className="uk-container gallery-container">
+        <div className="uk-container gallery-container" data-uk-lightbox="animation: scale">
           <Slider
             {...settings}
-            data-uk-lightbox="animation: scale"
             className="slides-container"
           >
             <a
               className="uk-link-reset"
               href={sampleImg}
-              data-caption="Image description"
+              data-caption="Image description 1"
             >
               <div className="slider-item">
                 <div className="uk-cover-container uk-height-medium subtle-shadow">
@@ -65,7 +64,7 @@ class GallerySection extends Component {
             <a
               className="uk-link-reset"
               href={sampleImg}
-              data-caption="Image description"
+              data-caption="Image description 2"
             >
               <div className="slider-item">
                 <div className="uk-cover-container uk-height-medium subtle-shadow">
@@ -83,7 +82,7 @@ class GallerySection extends Component {
             <a
               className="uk-link-reset"
               href={sampleImg}
-              data-caption="Image description"
+              data-caption="Image description 3"
             >
               <div className="slider-item">
                 <div className="uk-cover-container uk-height-medium subtle-shadow">
@@ -101,7 +100,7 @@ class GallerySection extends Component {
             <a
               className="uk-link-reset"
               href={sampleImg}
-              data-caption="Image description"
+              data-caption="Image description 4"
             >
               <div className="slider-item">
                 <div className="uk-cover-container uk-height-medium subtle-shadow">
