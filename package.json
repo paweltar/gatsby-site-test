@@ -21,7 +21,10 @@
     "gatsby-transformer-sharp": "^1.6.10",
     "jquery": "^3.2.1",
     "leaflet": "^1.2.0",
+    "mapbox-gl": "^0.41.0",
+    "react-google-maps": "^9.0.1",
     "react-leaflet": "^1.7.1",
+    "react-mapbox-gl": "^2.7.0",
     "uikit": "^3.0.0-beta.30"
   },
   "keywords": [

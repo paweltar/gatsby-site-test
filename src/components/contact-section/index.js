@@ -1,8 +1,7 @@
 import React from 'react'
 
 import './styles.scss'
-// import 'leaflet/dist/leaflet.css'
-// import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import MyMapComponent from './map'
 
 const ContactSection = () => {
   return (
@@ -26,6 +25,13 @@ const ContactSection = () => {
         </ul>
       </div>
       <div id="map-container">
+      <MyMapComponent
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzKkIdu16ZlcgEA_OY0sf1RXqxeDE7Qq4"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
       </div>
     </div>
   )
