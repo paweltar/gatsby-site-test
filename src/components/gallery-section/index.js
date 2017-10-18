@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 import Slider from "react-slick";
+import Img from 'gatsby-image'
 
 import "./styles.scss";
 import sampleImg from "./images/img1.jpg";
 
 class GallerySection extends Component {
   render() {
+    console.log(this.props.galleryData);
+
+    const galleryData = this.props.galleryData;
+
     const settings = {
       infinite: true,
       draggable: true,
@@ -18,6 +23,7 @@ class GallerySection extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 3500,
+      lazyLoad: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -38,82 +44,31 @@ class GallerySection extends Component {
     };
     return (
       <div className="uk-section uk-section-muted" id="section-gallery">
-        <div className="uk-container gallery-container" data-uk-lightbox="animation: scale">
-          <Slider
-            {...settings}
-            className="slides-container"
-          >
-            <a
-              className="uk-link-reset"
-              href={sampleImg}
-              data-caption="Image description 1"
-            >
-              <div className="slider-item">
-                <div className="uk-cover-container uk-height-medium subtle-shadow">
-                  <canvas width="200" height="200" />
-                  <img data-uk-cover src={sampleImg} alt="Some text here" />
+        <div
+          className="uk-container gallery-container"
+          data-uk-lightbox="animation: scale"
+        >
+          <Slider {...settings} className="slides-container">
+            {galleryData.map(image => (
+              <a
+                className="uk-link-reset"
+                href={image.node.original.src}
+                data-caption="Image description 1"
+                key={image.node.id}
+              >
+                <div className="slider-item">
+                  <div className="uk-cover-container uk-height-medium subtle-shadow">
+                    <Img resolutions={image.node.resolutions} alt="Some text here" style={{width: '100%', height: '100%'}}/>
+                  </div>
+                  <h1 className="uk-heading-bullet">Heading Bullet</h1>
+                  <p className="uk-article-meta">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
                 </div>
-                <h1 className="uk-heading-bullet">Heading Bullet</h1>
-                <p className="uk-article-meta">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className="uk-link-reset"
-              href={sampleImg}
-              data-caption="Image description 2"
-            >
-              <div className="slider-item">
-                <div className="uk-cover-container uk-height-medium subtle-shadow">
-                  <canvas width="200" height="200" />
-                  <img data-uk-cover src={sampleImg} alt="Some text here" />
-                </div>
-                <h1 className="uk-heading-bullet">Heading Bullet</h1>
-                <p className="uk-article-meta">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className="uk-link-reset"
-              href={sampleImg}
-              data-caption="Image description 3"
-            >
-              <div className="slider-item">
-                <div className="uk-cover-container uk-height-medium subtle-shadow">
-                  <canvas width="200" height="200" />
-                  <img data-uk-cover src={sampleImg} alt="Some text here" />
-                </div>
-                <h1 className="uk-heading-bullet">Heading Bullet</h1>
-                <p className="uk-article-meta">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className="uk-link-reset"
-              href={sampleImg}
-              data-caption="Image description 4"
-            >
-              <div className="slider-item">
-                <div className="uk-cover-container uk-height-medium subtle-shadow">
-                  <canvas width="200" height="200" />
-                  <img data-uk-cover src={sampleImg} alt="Some text here" />
-                </div>
-                <h1 className="uk-heading-bullet">Heading Bullet</h1>
-                <p className="uk-article-meta">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </a>
+              </a>
+            ))}
           </Slider>
         </div>
       </div>

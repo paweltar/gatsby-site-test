@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
     <div>
       <HeroSection image={data.heroImage.childImageSharp.sizes}/>
       <AboutSection image={data.aboutImage.childImageSharp.sizes}/>
-      <GallerySection/>
+      <GallerySection galleryData={data.galleryImages.edges}/>
       <CtaModule/>
       <ContactSection/>
     </div>
@@ -36,6 +36,21 @@ query SampleQuery {
     childImageSharp {
       sizes(maxWidth: 1200) {
         ...GatsbyImageSharpSizes
+      }
+    }
+  }
+  galleryImages: allImageSharp(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
+    edges {
+      node {
+        id
+        original {
+          width
+          height
+          src
+        }
+        resolutions(width: 360, height: 300) {
+          ...GatsbyImageSharpResolutions
+        }
       }
     }
   }
