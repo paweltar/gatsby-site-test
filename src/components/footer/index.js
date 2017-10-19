@@ -97,7 +97,7 @@ class Footer extends Component {
             </div>
           <div className="uk-section-media uk-light uk-background-cover uk-background-fixed uk-padding-small menu-bottom__container">
             <div className="uk-container uk-container-small">
-              <p className="uk-text-meta uk-margin-small-right uk-text-center uk-heading-line"><span>Company Name | 2017 &copy;</span></p>
+              <p className="uk-text-meta uk-margin-small-right uk-text-center uk-heading-line"><span>Company Name | {new Date().getFullYear()} &copy;</span></p>
             </div>
           </div>
       </div>
