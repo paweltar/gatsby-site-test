@@ -11,6 +11,7 @@ try {
   console.log(e);
 }
 
+// import "uikit/dist/css/uikit.css"
 import '../scss/index.scss'
 
 import Header from '../components/header'

@@ -1,11 +1,12 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 h1,
 .uk-h1 {
   font-weight: 100;
 }
 
-// Font families
-$font-primary: "Helvetica", "Arial", sans-serif;
-$font-secondary: "Helvetica", "Arial", sans-serif;
-$font-mono: "Consolas", monospace;
-$font-print-primary: "Georgia", "Times New Roman", "Times", serif;
-$font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
+p {
+  font-weight: 300;
+}
