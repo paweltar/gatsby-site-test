@@ -25,6 +25,7 @@
     "leaflet": "^1.2.0",
     "mapbox-gl": "^0.41.0",
     "react-google-maps": "^9.0.1",
+    "react-image-palette": "^0.1.2",
     "react-leaflet": "^1.7.1",
     "react-mapbox-gl": "^2.7.0",
     "react-slick": "^0.15.4",

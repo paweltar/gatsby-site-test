@@ -8,7 +8,6 @@ import ContactSection from '../components/contact-section'
 import GallerySection from '../components/gallery-section'
 
 const IndexPage = ({data}) => {
-  // console.log(data)
   return (
     <div>
       <HeroSection image={data.heroImage.childImageSharp.sizes}/>
