@@ -8,7 +8,7 @@ import ContactSection from '../components/contact-section'
 import GallerySection from '../components/gallery-section'
 
 const IndexPage = ({data}) => {
-  console.log(data)
+  // console.log(data)
   return (
     <div>
       <HeroSection image={data.heroImage.childImageSharp.sizes}/>
@@ -25,17 +25,19 @@ export default IndexPage
 
 export const query = graphql`
 query SampleQuery {
-  galleryImages: allImageSharp(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
+  galleryImages: allFile(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
     edges {
       node {
         id
-        original {
-          width
-          height
-          src
-        }
-        resolutions(width: 360, height: 300) {
-          ...GatsbyImageSharpResolutions
+        childImageSharp {
+          original {
+            width
+            height
+            src
+          }
+          resolutions(width: 360, height: 300) {
+            ...GatsbyImageSharpResolutions
+          }
         }
       }
     }

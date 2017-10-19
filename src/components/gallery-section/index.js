@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import Img from 'gatsby-image'
 
 import "./styles.scss";
-import sampleImg from "./images/img1.jpg";
 
 class GallerySection extends Component {
   render() {
@@ -51,13 +50,13 @@ class GallerySection extends Component {
             {galleryData.map(image => (
               <a
                 className="uk-link-reset"
-                href={image.node.original.src}
+                href={image.node.childImageSharp.original.src}
                 data-caption="Image description 1"
                 key={image.node.id}
               >
                 <div className="slider-item">
                   <div className="uk-cover-container uk-height-medium subtle-shadow">
-                    <Img resolutions={image.node.resolutions} alt="Some text here" style={{width: '100%', height: '100%'}}/>
+                    <Img resolutions={image.node.childImageSharp.resolutions} alt="Some text here" style={{width: '100%', height: '100%'}}/>
                   </div>
                   <h1 className="uk-heading-bullet">Heading Bullet</h1>
                   <p className="uk-article-meta">
