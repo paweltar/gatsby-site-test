@@ -16,7 +16,10 @@ class Header extends Component {
           <div className="uk-navbar-right uk-margin-large-right">
             <ul className="uk-navbar-nav">
               
-                <li><Link to='/page-2'>Page 2</Link></li>
+                <li><a href="#section-about" data-uk-scroll>About</a></li>
+                <li><a href="#section-gallery" data-uk-scroll>Gallery</a></li>
+                <li><a href="#cta-module" data-uk-scroll>Modules</a></li>
+                <li><a href="#section-contact" data-uk-scroll>Contact</a></li>
               
             </ul>
           </div>
@@ -45,7 +48,10 @@ class Header extends Component {
                 <li className="uk-nav-divider"></li>
                 <li><Link to='/'>Home</Link></li>
                 
-                  <li><Link to='/page-2'>Page 2</Link></li>
+                <li><a href="#section-about" data-uk-scroll>About</a></li>
+                <li><a href="#section-gallery" data-uk-scroll>Gallery</a></li>
+                <li><a href="#cta-module" data-uk-scroll>Modules</a></li>
+                <li><a href="#section-contact" data-uk-scroll>Contact</a></li>
                 
               </ul>
             </div>
