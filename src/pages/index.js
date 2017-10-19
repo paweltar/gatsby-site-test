@@ -25,20 +25,6 @@ export default IndexPage
 
 export const query = graphql`
 query SampleQuery {
-  aboutImage: file(relativePath: { regex: "/wallhaven-348304/"}) {
-    childImageSharp {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
-  heroImage: file(relativePath: { regex: "/bg-about/"}) {
-    childImageSharp {
-      sizes(maxWidth: 1200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
   galleryImages: allImageSharp(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
     edges {
       node {
@@ -51,6 +37,20 @@ query SampleQuery {
         resolutions(width: 360, height: 300) {
           ...GatsbyImageSharpResolutions
         }
+      }
+    }
+  }
+  aboutImage: file(relativePath: { regex: "/wallhaven-348304/"}) {
+    childImageSharp {
+      sizes(maxWidth: 800) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+  heroImage: file(relativePath: { regex: "/bg-about/"}) {
+    childImageSharp {
+      sizes(maxWidth: 1200) {
+        ...GatsbyImageSharpSizes
       }
     }
   }
