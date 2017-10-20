@@ -8,6 +8,7 @@ import "./styles.scss";
 
 class GallerySection extends Component {
   render() {
+    console.log(this.props.galleryData)
     const galleryData = this.props.galleryData;
 
     const settings = {
@@ -49,13 +50,13 @@ class GallerySection extends Component {
               {galleryData.map(image => (
                 <a
                   className="uk-link-reset"
-                  href={image.node.childImageSharp.original.src}
+                  href={image.node.original.src}
                   data-caption="Image description"
                   key={image.node.id}
                 >
                   <div className="slider-item">
                     <div className="uk-cover-container uk-height-medium subtle-shadow">
-                      <Img resolutions={image.node.childImageSharp.resolutions} alt="Gallery image" style={{width: '100%', height: '100%'}}/>
+                      <Img resolutions={image.node.resolutions} alt="Gallery image" style={{width: '100%', height: '100%'}}/>
                     </div>
                     <h1 className="uk-heading-bullet">Heading Bullet</h1>
                     <p className="uk-article-meta">

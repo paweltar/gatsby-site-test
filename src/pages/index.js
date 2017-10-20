@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
 import AboutSection from '../components/about-section'
@@ -7,37 +7,35 @@ import CtaModule from '../components/cta-module'
 import ContactSection from '../components/contact-section'
 import GallerySection from '../components/gallery-section'
 
-const IndexPage = ({data}) => {
-  console.log(data.galleryImages);
-  return (
-    <div>
-      <HeroSection image={data.heroImage.childImageSharp.sizes} textData={data.heroData}/>
-      <AboutSection image={data.aboutImage.childImageSharp.sizes}/>
-      <GallerySection galleryData={data.galleryImages ? data.galleryImages.edges : false}/>
-      <CtaModule/>
-      <ContactSection/>
-    </div>
-  )
+class IndexPage extends Component {
+  render() {
+    return (
+      <div>
+        <HeroSection image={this.props.data.heroImage.childImageSharp.sizes} textData={this.props.data.heroData}/>
+        <AboutSection image={this.props.data.aboutImage.childImageSharp.sizes}/>
+        <GallerySection galleryData={this.props.data.galleryImages ? this.props.data.galleryImages.edges : false}/>
+        <CtaModule/>
+        <ContactSection/>
+      </div>
+    )
+  }
 }
-
 
 export default IndexPage
 
-export const query = graphql`
+export const pageQuery = graphql`
 query SampleQuery {
-  galleryImages: allFile(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
+  galleryImages: allImageSharp(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
     edges {
       node {
         id
-        childImageSharp {
-          original {
-            width
-            height
-            src
-          }
-          resolutions(width: 360, height: 300) {
-            ...GatsbyImageSharpResolutions
-          }
+        original {
+          width
+          height
+          src
+        }
+        resolutions(width: 360, height: 300) {
+          ...GatsbyImageSharpResolutions
         }
       }
     }
