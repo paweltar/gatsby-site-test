@@ -8,11 +8,12 @@ import ContactSection from '../components/contact-section'
 import GallerySection from '../components/gallery-section'
 
 const IndexPage = ({data}) => {
+  console.log(data.galleryImages);
   return (
     <div>
-      <HeroSection image={data.heroImage.childImageSharp.sizes}/>
+      <HeroSection image={data.heroImage.childImageSharp.sizes} textData={data.heroData}/>
       <AboutSection image={data.aboutImage.childImageSharp.sizes}/>
-      <GallerySection galleryData={data.galleryImages.edges}/>
+      <GallerySection galleryData={data.galleryImages ? data.galleryImages.edges : false}/>
       <CtaModule/>
       <ContactSection/>
     </div>
@@ -54,6 +55,10 @@ query SampleQuery {
         ...GatsbyImageSharpSizes
       }
     }
+  }
+  heroData: heroJson {
+    bigHeader
+    description
   }
 }
 `

@@ -38,37 +38,46 @@ class GallerySection extends Component {
         }
       ]
     };
-    return (
-      <div className="uk-section uk-section-muted" id="section-gallery">
-        <div
-          className="uk-container gallery-container"
-          data-uk-lightbox="animation: scale"
-        >
-          <Slider {...settings} className="slides-container">
-            {galleryData.map(image => (
-              <a
-                className="uk-link-reset"
-                href={image.node.childImageSharp.original.src}
-                data-caption="Image description 1"
-                key={image.node.id}
-              >
-                <div className="slider-item">
-                  <div className="uk-cover-container uk-height-medium subtle-shadow">
-                    <Img resolutions={image.node.childImageSharp.resolutions} alt="Some text here" style={{width: '100%', height: '100%'}}/>
+    if (galleryData) {
+      return (
+        <div className="uk-section uk-section-muted" id="section-gallery">
+          <div
+            className="uk-container gallery-container"
+            data-uk-lightbox="animation: scale"
+          >
+            <Slider {...settings} className="slides-container">
+              {galleryData.map(image => (
+                <a
+                  className="uk-link-reset"
+                  href={image.node.childImageSharp.original.src}
+                  data-caption="Image description"
+                  key={image.node.id}
+                >
+                  <div className="slider-item">
+                    <div className="uk-cover-container uk-height-medium subtle-shadow">
+                      <Img resolutions={image.node.childImageSharp.resolutions} alt="Gallery image" style={{width: '100%', height: '100%'}}/>
+                    </div>
+                    <h1 className="uk-heading-bullet">Heading Bullet</h1>
+                    <p className="uk-article-meta">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
                   </div>
-                  <h1 className="uk-heading-bullet">Heading Bullet</h1>
-                  <p className="uk-article-meta">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </a>
-            ))}
-          </Slider>
+                </a>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
-    );
+      )
+    }
+    else {
+      return (
+        <div>
+          <p>Loading...</p>
+        </div>
+      )
+    }
   }
 }
 
