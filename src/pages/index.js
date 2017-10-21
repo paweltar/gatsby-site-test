@@ -13,7 +13,7 @@ class IndexPage extends Component {
       <div>
         <HeroSection image={this.props.data.heroImage.childImageSharp.sizes} textData={this.props.data.heroData}/>
         <AboutSection image={this.props.data.aboutImage.childImageSharp.sizes}/>
-        <GallerySection galleryData={this.props.data.galleryImages ? this.props.data.galleryImages.edges : false}/>
+        <GallerySection galleryData={this.props.data.galleryImages.edges}/>
         <CtaModule/>
         <ContactSection/>
       </div>

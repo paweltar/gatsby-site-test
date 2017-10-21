@@ -8,7 +8,6 @@ import "./styles.scss";
 
 class GallerySection extends Component {
   render() {
-    console.log(this.props.galleryData)
     const galleryData = this.props.galleryData;
 
     const settings = {
