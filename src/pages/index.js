@@ -25,7 +25,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query SampleQuery {
-  galleryImages: allImageSharp(filter: {id: {regex: "/home/paweltar/Projekty/Nauka/Gatsby/sitetest/src/static/gallery/"}}) {
+  galleryImages: allImageSharp(filter: {id: {regex: "/static/gallery/"}}) {
     edges {
       node {
         id
